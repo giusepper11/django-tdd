@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.9
 
 LABEL maintainer="Giuseppe"
 
@@ -20,7 +20,6 @@ RUN python -m venv /py && \
     fi && \
     rm -rf /tmp && \
     adduser --disabled-password \
-            --no-create-home \
             django_user
 
 ENV PATH="/py/bin:$PATH"
